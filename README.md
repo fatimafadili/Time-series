@@ -1,43 +1,39 @@
-markdown
-# 📊 Analyse des Séries Temporelles - Projet Complet
+📊 Analyse des Séries Temporelles - Projet Complet
+🎯 Description du Projet
+Ce projet présente une analyse complète des techniques de prévision des séries temporelles, allant des méthodes statistiques traditionnelles aux modèles avancés de Deep Learning (RNN, LSTM, CNN, Transformers). L'objectif est de fournir une boîte à outils complète pour la prédiction de séries temporelles avec des exemples pratiques et des benchmarks comparatifs.
 
-## 🎯 Description du Projet
-Ce projet présente une analyse complète des techniques de prévision des séries temporelles, allant des méthodes statistiques traditionnelles aux modèles avancés de Deep Learning (RNN, LSTM, CNN, Transformers).
-
-## 📁 Structure du Projet
+📁 Structure du Projet
+text
 time-series-project/
 ├── README.md
 ├── time_series_analysis.ipynb
 ├── requirements.txt
 ├── data/
-│ ├── generated_series.npy
-│ └── time_series.csv
+│   ├── generated_series.npy
+│   └── time_series.csv
 ├── models/
-│ ├── naive_model.pkl
-│ ├── nn_model.h5
-│ ├── lstm_model.h5
-│ └── transformer_model.h5
+│   ├── naive_model.pkl
+│   ├── nn_model.h5
+│   ├── lstm_model.h5
+│   └── transformer_model.h5
 ├── src/
-│ ├── data_preprocessing.py
-│ ├── models.py
-│ └── utils.py
+│   ├── data_preprocessing.py
+│   ├── models.py
+│   └── utils.py
 └── results/
-├── predictions/
-└── visualizations/
+    ├── predictions/
+    └── visualizations/
+🚀 Installation
+Prérequis
+Python 3.8+
 
-text
+pip ou conda
 
-## 🚀 Installation
-
-### Prérequis
-- Python 3.8+
-- pip ou conda
-
-### Installation des dépendances
-```bash
+Installation des dépendances
+bash
 pip install -r requirements.txt
 Dépendances principales
-text
+txt
 numpy==1.24.3
 pandas==2.0.3
 matplotlib==3.7.2
@@ -47,6 +43,8 @@ scikit-learn==1.3.0
 jupyter==1.0.0
 📊 Données
 Génération de données synthétiques
+Le projet utilise des données synthétiques avec tendance, saisonnalité et bruit :
+
 python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -267,20 +265,3 @@ Ensembling de modèles
 
 Features engineering temporel
 
-🐛 Dépannage
-Problèmes courants et solutions :
-Problème 1 : Erreur d'import TensorFlow
-
-bash
-# Solution
-pip install --upgrade tensorflow
-Problème 2 : Mémoire insuffisante
-
-python
-# Solution - Réduire la taille des batches
-batch_size = 16  # au lieu de 32
-Problème 3 : Convergence lente
-
-python
-# Solution - Ajuster le learning rate
-optimizer = tf.keras.optimizers.Adam(learning_rate=0.0001)
